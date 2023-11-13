@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+}
+cw-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all 350ms;
+}
+
+.groupItems{
+  position: absolute;
+  display: flex;
+  gap: 24px;
+  left: 0;
+  transition: all 350ms;
+}
+
+.prevButton {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nextButton {
+  right: 0px;
+}
+
+.prevButton,
+.nextButton {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+  background: transparent;
+  transition: all 0.350 sec;
+}
+
+.prevButton.active,
+.nextButton.active{
+  visibility: visible;
+}
+
+.prevButton.active:hover,
+.nextButton.active:hover{
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(0 0 0 / 34%) 70%, rgb(50 48 48 / 85%) 100%);
+}
+
+.index-section {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.index {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.index.active {
+  opacity: 1;
+}

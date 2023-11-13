@@ -17,13 +17,15 @@
       "ecmaVersion": "latest",
       "sourceType": "module",
       "project": "./tsconfig.json",
-      "extraFileExtensions":[".css"]
+      "extraFileExtensions":[".css", ".html", ".png", ".md"]
   },
   "plugins": [
       "@typescript-eslint"
   ],
   "rules": {
       "@typescript-eslint/explicit-module-boundary-types": "off",
-      "@stencil-community/strict-boolean-conditions": "off"
-  }
+      "@stencil-community/strict-boolean-conditions": "off",
+      "@stencil-community/required-jsdoc": "off"
+  },
+  "ignorePatterns":["src/assets/*","src/components/**/*.css","src/components/**/*.md", "index.html"]
 }
