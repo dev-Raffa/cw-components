@@ -3,7 +3,8 @@ import { Arrow } from './icons/arrow';
 
 @Component({
   tag: 'cw-carousel',
-  styleUrl: 'cw-carousel.css'
+  styleUrl: 'cw-carousel.css',
+  shadow: true
 })
 export class Carousel {
   @Element() el: HTMLCwCarouselElement;

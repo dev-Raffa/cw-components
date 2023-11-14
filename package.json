@@ -1,7 +1,7 @@
 {
-  "name": "cw-components",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "kyra-components",
+  "version": "0.1.0",
+  "description": "a web component lib",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.js",
