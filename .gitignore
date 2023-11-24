@@ -17,6 +17,10 @@ log.txt
 .vscode/
 .sass-cache/
 .versions/
+.replit
+result
+package-lock.json
+replit.nix
 node_modules/
 $RECYCLE.BIN/
 
