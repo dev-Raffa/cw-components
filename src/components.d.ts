@@ -15,6 +15,15 @@ export namespace Components {
         "time": number;
         "width": string;
     }
+    interface CwDraggable {
+        "bgColor": string;
+        "border": string;
+        "gap": string;
+        "height": string;
+        "title": string;
+        "transition": string;
+        "width": string;
+    }
 }
 declare global {
     interface HTMLCwCarouselElement extends Components.CwCarousel, HTMLStencilElement {
@@ -23,8 +32,15 @@ declare global {
         prototype: HTMLCwCarouselElement;
         new (): HTMLCwCarouselElement;
     };
+    interface HTMLCwDraggableElement extends Components.CwDraggable, HTMLStencilElement {
+    }
+    var HTMLCwDraggableElement: {
+        prototype: HTMLCwDraggableElement;
+        new (): HTMLCwDraggableElement;
+    };
     interface HTMLElementTagNameMap {
         "cw-carousel": HTMLCwCarouselElement;
+        "cw-draggable": HTMLCwDraggableElement;
     }
 }
 declare namespace LocalJSX {
@@ -37,8 +53,18 @@ declare namespace LocalJSX {
         "time"?: number;
         "width"?: string;
     }
+    interface CwDraggable {
+        "bgColor"?: string;
+        "border"?: string;
+        "gap"?: string;
+        "height"?: string;
+        "title"?: string;
+        "transition"?: string;
+        "width"?: string;
+    }
     interface IntrinsicElements {
         "cw-carousel": CwCarousel;
+        "cw-draggable": CwDraggable;
     }
 }
 export { LocalJSX as JSX };
@@ -46,6 +72,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "cw-carousel": LocalJSX.CwCarousel & JSXBase.HTMLAttributes<HTMLCwCarouselElement>;
+            "cw-draggable": LocalJSX.CwDraggable & JSXBase.HTMLAttributes<HTMLCwDraggableElement>;
         }
     }
 }
