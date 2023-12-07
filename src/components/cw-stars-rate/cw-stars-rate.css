@@ -1,0 +1,25 @@
+:host {
+  --bg-color: #fff;
+  --star-unselected-color: transparent;
+  --star-selected-colot: #ffd700;
+  --size: 24px;
+  
+  position:relative;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+  height: var(--size);
+}
+
+.stars {
+  color: var(--star-unselected-color);
+  height: 1em;
+  transition:all 0.3s ease;
+}
+
+.stars.selected {
+  color: var(--star-selected-colot);
+}

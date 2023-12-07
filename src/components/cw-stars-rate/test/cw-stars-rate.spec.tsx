@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { CwDraggable } from '../cw-draggable';
+import { CwStarsRate } from '../cw-stars-rate';
 
-describe('cw-draggable', () => {
+describe('cw-stars-rate', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [CwDraggable],
-      html: `<cw-draggable></cw-draggable>`
+      components: [CwStarsRate],
+      html: `<cw-stars-rate></cw-stars-rate>`,
     });
     expect(page.root).toEqualHtml(`
-      <cw-draggable>
+      <cw-stars-rate>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </cw-draggable>
+      </cw-stars-rate>
     `);
   });
 });

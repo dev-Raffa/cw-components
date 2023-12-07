@@ -1,0 +1,57 @@
+cw-dropdown {
+  --bg-color: #fff;
+  --border: 1px solid black;
+  --width: fit-content;
+
+  position:relative;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: var(--width);
+  padding: 4px 8px;
+  border: 1px solid black;
+  transition: all 1s ease;
+  box-sizing: var(--border);
+  margin: 0;
+}
+
+cw-dropdown > *,
+cw-dropdwon > * > * {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+cw-dropdown > header {
+  cursor: pointer;
+  display:flex;
+  align-items:center;
+  justify-content: space-betwen;
+  gap: 12px;
+  padding:0 4px;
+  width:100%;
+}
+
+cw-dropdwon > header > .arrow {
+  transition: all 0.5s linear;
+}
+
+cw-dropdwon > header > .arrow.open {
+  transform:rotate(-90deg);
+}
+
+cw-dropdwon > .items {
+  transition: 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4px;
+  width: 100%;
+  height:0;
+  overflow:hidden;
+}
+
+cw-dropdwon > .items.show {
+  height: fit-content; 
+}

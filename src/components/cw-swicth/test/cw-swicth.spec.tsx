@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { CwDraggable } from '../cw-draggable';
+import { CwSwicth } from '../cw-swicth';
 
-describe('cw-draggable', () => {
+describe('cw-swicth', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [CwDraggable],
-      html: `<cw-draggable></cw-draggable>`
+      components: [CwSwicth],
+      html: `<cw-swicth></cw-swicth>`,
     });
     expect(page.root).toEqualHtml(`
-      <cw-draggable>
+      <cw-swicth>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </cw-draggable>
+      </cw-swicth>
     `);
   });
 });
